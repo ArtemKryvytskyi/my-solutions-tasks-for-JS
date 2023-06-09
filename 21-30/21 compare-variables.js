@@ -9,9 +9,24 @@
 let myVariable1 = 10
 let myVariable2 = '5'
 
-// Напишите код здесь
+if (myVariable1<=myVariable2){
+   console.log(true)
+}   
 
 myVariable1 = '20'
 myVariable2 = 100
 
-// Напишите код здесь
+if ((+myVariable1) <= (+myVariable2)){
+   console.log(true)
+}
+
+//teacher's decision
+myVariable1 = 10
+myVariable2 = '5'
+
+console.log(parseInt(myVariable1)<=parseInt(myVariable2));
+
+myVariable1 = '20'
+myVariable2 = 100
+
+console.log(parseInt(myVariable1)<=parseInt(myVariable2));
