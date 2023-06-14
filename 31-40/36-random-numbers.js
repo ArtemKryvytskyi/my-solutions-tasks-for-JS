@@ -18,3 +18,37 @@ const MIN = 1000
 const MAX = 9999
 
 const myNumbers = [2355, 7235, 8135, 1762, 2361, 8351]
+
+const randomNumb = (min,max)=> {return Math.floor(Math.random() * (max - min + 1) ) + min;}
+
+function addInArray(arr) {
+   const newNumber = randomNumb(MIN,MAX);
+   const newArr = [...arr];
+   newArr.forEach(element => {
+      if(element===newNumber){
+         addInArray(myNumbers);
+      }
+   });
+   newArr.push(newNumber);
+   return newArr;
+}
+//console.log(myNumbers);
+//console.log(addInArray(myNumbers));
+
+//решение учителя
+
+const addRandomNumberToArray=(arr,min,max)=>{
+   let newRandomNumber
+   const updateArr=[...arr]
+
+   do{
+      newRandomNumber = randomNumb(MIN,MAX);
+   } while (updateArr.includes(newRandomNumber))
+
+   updateArr.push(newRandomNumber);
+   return updateArr;
+}
+
+const updatedArray=addRandomNumberToArray(myNumbers,MIN,MAX)
+
+console.log(updatedArray)

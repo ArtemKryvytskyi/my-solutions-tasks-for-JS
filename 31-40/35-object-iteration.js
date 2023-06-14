@@ -13,3 +13,19 @@ const myObject = {
   key4: null,
   key10: NaN,
 }
+for (const key in myObject) {
+  
+  if (myObject[key]===true||myObject[key]==='abc') {
+    const element = myObject[key];
+    console.log(element);
+  }
+}
+
+//решение учителя.
+const objectKeys = Object.keys(myObject);
+
+objectKeys.forEach((key)=>{
+  if(key==='key1'||key==='key3'){
+    console.log(myObject[key])
+  }
+})

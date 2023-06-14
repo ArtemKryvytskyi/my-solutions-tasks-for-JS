@@ -10,3 +10,27 @@
  */
 
 const myCities = ['London', 'New York', 'Singapore']
+/*
+function cityInfo(city, index) {
+   return `${city} is at the index ${index} in the myCities array`
+}
+
+myCities.forEach((index)=>{
+   const city = index;
+   const number= myCities.indexOf(index)
+   console.log(cityInfo(city, number));
+})
+
+//решение учителя
+/*
+const cityInfo = (city,index) => 
+`${city} is at the index ${index} in the myCities array`
+
+myCities.forEach((city,index)=>console.log(cityInfo(city,index)))
+*/
+//Деструктуризация
+
+const cityInfo = ({city,index}) => 
+`${city} is at the index ${index} in the myCities array`
+
+myCities.forEach((city,index)=>console.log(cityInfo({index,city})))

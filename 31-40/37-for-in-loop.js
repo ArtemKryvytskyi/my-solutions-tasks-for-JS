@@ -16,3 +16,10 @@ Object.prototype.country = 'England'
 for (let key in myObject) {
   console.log(myObject[key])
 }
+
+//решение учителя
+
+for (let key in myObject) {
+  if(myObject.hasOwnProperty(key))
+  console.log(myObject[key])
+}
